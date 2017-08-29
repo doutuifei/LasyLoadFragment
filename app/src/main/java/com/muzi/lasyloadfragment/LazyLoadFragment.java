@@ -91,7 +91,6 @@ public abstract class LazyLoadFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        stopLoad();
         isInit = false;
         isLoad = false;
     }
@@ -99,7 +98,6 @@ public abstract class LazyLoadFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        stopLoad();
         isPause = true;
     }
 
@@ -108,7 +106,7 @@ public abstract class LazyLoadFragment extends Fragment {
         super.onResume();
         if (isPause) {
             isPause = false;
-            isCanLoadData();
+            lazyLoad();
         }
     }
 
