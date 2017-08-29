@@ -20,3 +20,6 @@ fragment懒加载，
  * 任意fragment切换都会刷新数据
  * 跳转activity，返回也会刷新数据，如果不需要，注释onResume方法即可
  * 注意设置：viewpager.setOffscreenPageLimit(1);否则可能出现数据加载不出来bug
+
+最后是效果图
+![image](https://github.com/TurnTears/LasyLoadFragment/blob/a2fda9d97460d68fb87fb03e2477764bf9d0924e/imag/1.gif)
