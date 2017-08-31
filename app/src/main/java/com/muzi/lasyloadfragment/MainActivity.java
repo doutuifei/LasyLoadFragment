@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentAdapter = new FragmentAdapter(title, getSupportFragmentManager());
         viewpager.setAdapter(fragmentAdapter);
-        viewpager.setOffscreenPageLimit(1);
         tabLayout.setupWithViewPager(viewpager);
     }
 }

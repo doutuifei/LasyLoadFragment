@@ -11,16 +11,17 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
     String[] title = null;
+    FragmentFactory fragmentFactory;
 
     public FragmentAdapter(String[] title, FragmentManager fm) {
         super(fm);
         this.title = title;
+        fragmentFactory = new FragmentFactory();
     }
 
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment = FragmentFactory.createFragment(position);
-        return fragment;
+        return fragmentFactory.createFragment(position);
     }
 
     @Override

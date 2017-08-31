@@ -10,9 +10,13 @@ import java.util.HashMap;
  */
 
 public class FragmentFactory {
-    private static HashMap<Integer, Fragment> mBaseFragments = new HashMap<>();
+    private  HashMap<Integer, Fragment> mBaseFragments;
 
-    public static Fragment createFragment(int pos) {
+    public FragmentFactory() {
+        mBaseFragments = new HashMap<>();
+    }
+
+    public  Fragment createFragment(int pos) {
         Fragment baseFragment = mBaseFragments.get(pos);
 
         if (baseFragment == null) {

@@ -93,6 +93,7 @@ public abstract class LazyLoadFragment extends Fragment {
         super.onDestroyView();
         isInit = false;
         isLoad = false;
+        stopLoad();
     }
 
     @Override
